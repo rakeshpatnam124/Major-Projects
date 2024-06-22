@@ -4,11 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Error</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<h2>Error</h2>
-	<h2><%= exception.getMessage() %><br>
-	</h2>
+	<h1>Error</h1>
+	<h2><%=exception.getMessage()%><br/></h2>
 </body>
 </html>
