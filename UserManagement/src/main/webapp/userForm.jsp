@@ -31,13 +31,13 @@
 						<form action="insert" method="post">
 							<h2>
 								<caption>Add User</caption>
-							</h2>
+							</h2><br/>
 					</c:when>
 					<c:otherwise>
 						<form action="update" method="post">
 							<h2>
 								<caption>Edit User</caption>
-							</h2>
+							</h2><br/>
 							<input type="hidden" name="id"
 								value="<c:out value = '${user.id}'/>" />
 					</c:otherwise>
