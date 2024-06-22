@@ -8,27 +8,23 @@
 <meta charset="UTF-8">
 <title>User Management Application</title>
 <link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-	crossorigin="anonymous">
-
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-	<header>
-		<nav class="navbar navbar-expand-md navbar dark"
-			style="background-color: lightgray">
+	<div class = "container" style = "margin-top : 40px">
+		<nav class="navbar navbar-expand-md ">
 			<div>
-				<a href="#">User Management</a>
+				<a class = "nav-link" href="#"><button type="button" class="btn btn-outline-light" style = "color : black">User Management</button></a>
 			</div>
 			<ul class="navbar-nav">
 				<li><a href="<%=request.getContextPath()%>/list"
-					class="nav-link">Users</a></li>
+					class="nav-link active"><button type="button" class="btn btn-outline-light" style = "color : black">Users</button></a></li>
 			</ul>
 		</nav>
-	</header>
+	</div>
 	<br>
 	<div class="container col-md-5">
-		<div class="card">
+		<div class="card" style = "box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)">
 			<div class="card-body">
 				<c:choose>
 					<c:when test="${user == null}">
@@ -61,7 +57,9 @@
 						value="<c:out value = '${user.country}'/>" class="form-control"
 						name="country" required />
 				</fieldset>
-				<button type="submit" class="btn btn-success">Save</button>
+				<div class="d-grid gap-2">
+					<button type="submit" class="btn btn-success">Save</button>
+				</div>
 			</div>
 		</div>
 	</div>
