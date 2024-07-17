@@ -13,6 +13,11 @@
 	rel="stylesheet">
 <link rel="stylesheet" href="alert/dist/sweetalert.css">
 <style>
+.chart-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
 body {
 	background-color : #f5f5f5;
 }
@@ -71,7 +76,7 @@ body {
 					<b>User Login</b>
 				</div>
 				<div class="card-body">
-					<form action="<%=request.getContextPath()%>/login" method="get">
+					<form action="./login" method="post">
 						<div class="form-group">
 							<input type="hidden" id="status"
 								value="<%=request.getAttribute("status")%>" class="form-control">

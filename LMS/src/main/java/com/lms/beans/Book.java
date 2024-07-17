@@ -8,7 +8,14 @@ public class Book {
 	private String publisher;
 	private int publishingYear;
 	private int quantityAvailable;
+	
 		
+	public Book(int bid, String bname) {
+		super();
+		this.bid = bid;
+		this.bname = bname;
+	}
+
 	public Book(int bid, String bname, String author, int price, String publisher, int publishingYear,
 			int quantityAvailable) {
 		super();
@@ -87,5 +94,5 @@ public class Book {
 	public void setQuantityAvailable(int quantityAvailable) {
 		this.quantityAvailable = quantityAvailable;
 	}
-
+	
 }

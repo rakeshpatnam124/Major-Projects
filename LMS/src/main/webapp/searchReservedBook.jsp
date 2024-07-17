@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page
-	import="java.util.List, com.lms.beans.Book, com.lms.beans.UserBooks"%>
-
+	
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
@@ -46,58 +44,13 @@
 					cellspacing="0">
 					<thead>
 						<tr>
-							<th>ID</th>
+							<th>S No.</th>
 							<th>Book Name</th>
-							<th>Author</th>
-							<th>Price</th>
-							<th>Publisher</th>
-							<th>Published Year</th>
-							<th>Available Quantity</th>
-							<c:choose>
-								<c:when test="${role == 1}">
-									<th scope="col">Actions</th>
-								</c:when>
-							</c:choose>
-
+							<th>Date</th>
 						</tr>
 					</thead>
 					<tbody>
 
-						<%
-						com.lms.beans.Book searchedBook = (com.lms.beans.Book) request.getAttribute("searchedBook");
-						com.lms.beans.UserBooks userBooks = (com.lms.beans.UserBooks) request.getAttribute("userBooks");
-						if (searchedBook != null) {
-						%>
-						<tr>
-							<td><%=searchedBook.getBid()%></td>
-							<td><%=searchedBook.getBname()%></td>
-							<td><%=searchedBook.getAuthor()%></td>
-							<td><%=searchedBook.getPrice()%></td>
-							<td><%=searchedBook.getPublisher()%></td>
-							<td><%=searchedBook.getPublishingYear()%></td>
-							<td><%=searchedBook.getQuantityAvailable()%></td>
-							<c:choose>
-								<c:when test="${role == 1}">
-									<%
-									if (userBooks.getBidList().contains(Integer.valueOf(searchedBook.getBid())) == true) {
-									%>
-									<td><a href="./unreserveBook?bid=<%=searchedBook.getBid()%>"><button
-												class="btn btn-primary">Reserved</button></a></td>
-									<%
-									} else {
-									%>
-									<td><a href="./reserveBook?bid=<%=searchedBook.getBid()%>"><button
-												class="btn btn-success">Reserve</button></a></td>
-									<%
-									}
-									%>
-
-								</c:when>
-							</c:choose>
-						</tr>
-						<%
-						}
-						%>
 					</tbody>
 				</table>
 			</div>

@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Factory {
-	private static final String url = "jdbc:mysql://localhost:3306/lms?useSSL=false";
+	private static final String url = "jdbc:mysql://localhost:3306/lms";
 	private static final String userName = "root";
 	private static final String password = "root";
 	

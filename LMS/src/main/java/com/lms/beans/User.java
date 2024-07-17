@@ -10,12 +10,22 @@ public class User {
 	private String address;
 	private String role;
 	
-	public User(int id, String name, String email, String password, String mobile, String address, String role) {
+	public User(int id, String name,String idNumber, String email, String mobile, String address) {
 		super();
 		this.id = id;
 		this.name = name;
+		this.idNumber = idNumber;
 		this.email = email;
-		this.password = password;
+		this.mobile = mobile;
+		this.address = address;
+	}
+	
+	public User(int id, String name,String idNumber, String email, String mobile, String address, String role) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.idNumber = idNumber;
+		this.email = email;
 		this.mobile = mobile;
 		this.address = address;
 		this.role = role;
